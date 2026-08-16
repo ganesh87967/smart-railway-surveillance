@@ -1,0 +1,17 @@
+create database person;
+use person;
+
+create table register(username varchar(30) primary key,
+password varchar(30),
+gender varchar(20),
+contact varchar(12),
+email varchar(30),
+address varchar(40),
+department varchar(30));
+
+create table suspicious(employee_name varchar(30),
+monitoring_video varchar(60),
+monitor_date varchar(40),
+status varchar(130));
+
+
