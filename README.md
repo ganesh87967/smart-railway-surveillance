@@ -1,30 +1,28 @@
-Absolutely. Below is the **complete `README.md` file**. You can copy **everything inside the code block** and paste it directly into GitHub → `README.md`.
 
-````markdown
 <div align="center">
 
 # 🚆 Smart Surveillance in Indian Railways
 
 ### Deep Learning-Based Person Re-Identification for Public Safety
 
-<img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=22&duration=2500&pause=800&color=6366F1&center=true&vCenter=true&width=900&lines=Intelligent+Railway+Surveillance;Deep+Learning+%2B+Computer+Vision;Automated+Person+Re-Identification;Video+Monitoring+%26+Alert+Management"/>
+<img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=22&duration=2400&pause=700&color=6366F1&center=true&vCenter=true&width=900&lines=Intelligent+Railway+Surveillance;Deep+Learning+%2B+Computer+Vision;Automated+Person+Re-Identification;Video+Monitoring+%26+Alert+Management"/>
 
 <br><br>
 
 <img src="https://img.shields.io/badge/Python-3.7.2-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
-<img src="https://img.shields.io/badge/Deep%20Learning-CNN-FF6F00?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/Machine%20Learning-Random%20Forest%20%7C%20SVM-6366F1?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/Computer%20Vision-Video%20Analysis-16A34A?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/Database-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
+<img src="https://img.shields.io/badge/CNN-Deep%20Learning-FF6F00?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Random%20Forest-Machine%20Learning-6366F1?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/SVM-Classification-7C3AED?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
 
 <br><br>
 
 <a href="https://github.com/ganesh87967">
-<img src="https://img.shields.io/badge/GitHub-Ganesh%20Vindekoti-181717?style=for-the-badge&logo=github"/>
+<img src="https://img.shields.io/badge/GitHub-Ganesh%20Vindekoti-181717?style=for-the-badge&logo=github&logoColor=white"/>
 </a>
 
 <a href="https://www.linkedin.com/in/ganesh-vindekoti-630191278/">
-<img src="https://img.shields.io/badge/LinkedIn-Ganesh%20Vindekoti-0A66C2?style=for-the-badge&logo=linkedin"/>
+<img src="https://img.shields.io/badge/LinkedIn-Ganesh%20Vindekoti-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
 </a>
 
 </div>
@@ -35,9 +33,9 @@ Absolutely. Below is the **complete `README.md` file**. You can copy **everythin
 
 **Smart Surveillance in Indian Railways** is a deep learning and machine learning-based **Person Re-Identification (Re-ID)** system designed to support intelligent surveillance and public safety in railway environments.
 
-The system extracts high-level **facial and pose features using Convolutional Neural Networks (CNNs)** and uses machine learning classifiers such as **Random Forest and Support Vector Machine (SVM)** to identify suspicious individuals from surveillance footage.
+The system extracts high-level **facial and pose features using Convolutional Neural Networks (CNNs)** and uses **Random Forest** and **Support Vector Machine (SVM)** classifiers to identify suspicious individuals from surveillance footage.
 
-The platform provides separate workflows for **railway administrators and employees**. Administrators can manage suspicious-person datasets, extract features, train classification models, manage employees, and review alerts. Railway employees can upload surveillance videos for automated person re-identification and detection.
+The platform provides separate workflows for **Railway Administrators** and **Employees**. Administrators can manage suspicious-person datasets, extract features, train classification models, manage employees, and review alerts. Employees can upload surveillance videos for automated person re-identification and detection.
 
 When a suspicious individual is identified, the system records an alert that can be reviewed by an administrator.
 
@@ -45,9 +43,9 @@ When a suspicious individual is identified, the system records an alert that can
 
 ## 🎯 Problem Statement
 
-Traditional person identification systems often rely on manually crafted visual features.
+Traditional person identification systems often rely on manually crafted visual features, which can become challenging under real-world surveillance conditions.
 
-These approaches can struggle with:
+The system considers variations such as:
 
 - Different lighting conditions
 - Changes in pose
@@ -67,46 +65,60 @@ This project addresses these challenges by combining **CNN-based feature extract
 The system follows an end-to-end surveillance workflow:
 
 ```text
-                    Suspicious Person Dataset
+                 ┌──────────────────────────┐
+                 │  Suspicious Person Data   │
+                 └────────────┬─────────────┘
                               │
                               ▼
-                       Dataset Upload
+                 ┌──────────────────────────┐
+                 │      Dataset Upload      │
+                 └────────────┬─────────────┘
                               │
                               ▼
-                    CNN Feature Extraction
+                 ┌──────────────────────────┐
+                 │   CNN Feature Extraction │
+                 └────────────┬─────────────┘
                               │
                               ▼
-                    Face + Pose Features
+                 ┌──────────────────────────┐
+                 │   Face + Pose Features   │
+                 └────────────┬─────────────┘
                               │
-                    ┌─────────┴─────────┐
-                    ▼                   ▼
-              Random Forest            SVM
-                    │                   │
-                    └─────────┬─────────┘
+                     ┌────────┴────────┐
+                     ▼                 ▼
+              ┌─────────────┐   ┌─────────────┐
+              │Random Forest│   │     SVM     │
+              └──────┬──────┘   └──────┬──────┘
+                     │                 │
+                     └────────┬────────┘
                               ▼
-                     Model Evaluation
+                 ┌──────────────────────────┐
+                 │    Model Evaluation      │
+                 └────────────┬─────────────┘
                               │
                               ▼
-                      Selected Model
+                 ┌──────────────────────────┐
+                 │    Railway Surveillance  │
+                 │          Video           │
+                 └────────────┬─────────────┘
                               │
                               ▼
-                       Railway Video
+                 ┌──────────────────────────┐
+                 │ Person Re-Identification │
+                 └────────────┬─────────────┘
                               │
-                              ▼
-                   Person Re-Identification
-                              │
-                    ┌─────────┴─────────┐
-                    ▼                   ▼
-              Suspicious Match       No Match
-                    │                   │
-                    ▼                   ▼
-              Generate Alert       Continue
-                    │
-                    ▼
-              Store Detection
-                    │
-                    ▼
-                Admin Review
+                     ┌────────┴────────┐
+                     ▼                 ▼
+             Suspicious Match       No Match
+                     │                 │
+                     ▼                 ▼
+              Generate Alert        Continue
+                     │
+                     ▼
+               Store Detection
+                     │
+                     ▼
+                 Admin Review
 ````
 
 ---
@@ -117,30 +129,30 @@ The system follows an end-to-end surveillance workflow:
 
 The administrator uploads images of known suspicious individuals into the system.
 
-The dataset becomes the reference database used during person re-identification.
+The dataset acts as the reference database used during person re-identification.
 
 ---
 
 ## 2. CNN Feature Extraction
 
-The system processes the uploaded images using **Convolutional Neural Networks (CNNs)**.
+The uploaded images are processed using **Convolutional Neural Networks (CNNs)**.
 
-The CNN extracts high-level visual information such as:
+The CNN extracts high-level visual information including:
 
 * Facial features
 * Pose information
 * Visual representations useful for identification
 
-These extracted features are used as input for the machine learning classifiers.
+These extracted features are then provided to the machine learning classifiers.
 
 ---
 
 ## 3. Model Training
 
-The extracted CNN features are used to train:
+The extracted CNN features are used to train two classification approaches:
 
-* Random Forest
-* Support Vector Machine (SVM)
+* 🌲 Random Forest
+* 📐 Support Vector Machine (SVM)
 
 The models are evaluated and compared based on their performance.
 
@@ -150,25 +162,30 @@ The models are evaluated and compared based on their performance.
 
 Railway employees can upload surveillance footage through the employee interface.
 
-The system processes the video and attempts to identify whether a person in the footage matches an individual from the suspicious-person database.
+The system processes the video and attempts to determine whether a person in the footage matches an individual from the suspicious-person database.
 
 ---
 
 ## 5. Person Re-Identification
 
-The system compares the features obtained from the surveillance video against the trained identification model.
+The system processes surveillance footage and compares extracted features against the trained identification model.
 
 ```text
-CCTV Video
-     ↓
-Frame Processing
-     ↓
+CCTV / Test Video
+        │
+        ▼
+ Frame Processing
+        │
+        ▼
 Feature Extraction
-     ↓
-Feature Matching
-     ↓
-Classification
-     ↓
+        │
+        ▼
+ Feature Matching
+        │
+        ▼
+  Classification
+        │
+        ▼
 Person Identified?
 ```
 
@@ -178,64 +195,64 @@ Person Identified?
 
 If a suspicious person is identified, the system generates and stores an alert.
 
-Administrators can later review the generated alerts.
+Administrators can then review the generated detections.
 
 ---
 
 # 🏗️ System Architecture
 
 ```text
-                         ┌──────────────────────┐
-                         │  Suspicious Persons  │
-                         │       Dataset        │
-                         └──────────┬───────────┘
-                                    │
-                                    ▼
-                         ┌──────────────────────┐
-                         │   CNN Feature        │
-                         │     Extraction       │
-                         └──────────┬───────────┘
-                                    │
-                                    ▼
-                         ┌──────────────────────┐
-                         │ Extracted Features   │
-                         └──────────┬───────────┘
-                                    │
-                       ┌────────────┴────────────┐
-                       │                         │
-                       ▼                         ▼
-                ┌──────────────┐          ┌──────────────┐
-                │ Random Forest│          │     SVM      │
-                └───────┬──────┘          └───────┬──────┘
-                        │                         │
-                        └────────────┬────────────┘
-                                     ▼
-                           ┌──────────────────┐
-                           │ Model Evaluation │
-                           └────────┬─────────┘
-                                    │
-                                    ▼
-                           ┌──────────────────┐
-                           │ Railway Video    │
-                           │    Monitoring    │
-                           └────────┬─────────┘
-                                    │
-                                    ▼
-                           ┌──────────────────┐
-                           │ Person           │
-                           │ Re-Identification│
-                           └────────┬─────────┘
-                                    │
-                                    ▼
-                           ┌──────────────────┐
-                           │ Alert Generation │
-                           └────────┬─────────┘
-                                    │
-                                    ▼
-                           ┌──────────────────┐
-                           │ Admin Alert      │
-                           │ Review           │
-                           └──────────────────┘
+                       ┌───────────────────────┐
+                       │ Suspicious Person     │
+                       │       Dataset         │
+                       └───────────┬───────────┘
+                                   │
+                                   ▼
+                       ┌───────────────────────┐
+                       │   CNN Feature         │
+                       │     Extraction        │
+                       └───────────┬───────────┘
+                                   │
+                                   ▼
+                       ┌───────────────────────┐
+                       │ Extracted Features    │
+                       └───────────┬───────────┘
+                                   │
+                     ┌─────────────┴─────────────┐
+                     │                           │
+                     ▼                           ▼
+              ┌──────────────┐            ┌──────────────┐
+              │Random Forest │            │     SVM      │
+              └──────┬───────┘            └──────┬───────┘
+                     │                           │
+                     └─────────────┬─────────────┘
+                                   │
+                                   ▼
+                       ┌───────────────────────┐
+                       │   Model Evaluation    │
+                       └───────────┬───────────┘
+                                   │
+                                   ▼
+                       ┌───────────────────────┐
+                       │   Railway Video       │
+                       │      Monitoring       │
+                       └───────────┬───────────┘
+                                   │
+                                   ▼
+                       ┌───────────────────────┐
+                       │ Person                │
+                       │ Re-Identification     │
+                       └───────────┬───────────┘
+                                   │
+                                   ▼
+                       ┌───────────────────────┐
+                       │   Alert Generation    │
+                       └───────────┬───────────┘
+                                   │
+                                   ▼
+                       ┌───────────────────────┐
+                       │   Admin Alert Review  │
+                       └───────────────────────┘
 ```
 
 ---
@@ -246,31 +263,37 @@ The Admin interface provides centralized control over the surveillance system.
 
 ### Features
 
-* 🔐 Admin login
-* 📁 Upload suspicious-person dataset
-* 🧠 CNN feature extraction
-* 🤖 Train machine learning models
-* 📊 Compare model performance
-* 👥 Add and manage employees
-* 🚨 View generated alerts
-* 📋 Review surveillance detections
+* 🔐 Admin Login
+* 📁 Suspicious-person Dataset Upload
+* 🧠 CNN Feature Extraction
+* 🤖 Machine Learning Model Training
+* 📊 Model Performance Comparison
+* 👥 Employee Management
+* 🚨 Alert Management
+* 📋 Surveillance Detection Review
 
 ### Admin Workflow
 
 ```text
 Admin Login
-     ↓
-Load Suspicious Dataset
-     ↓
-Extract CNN Features
-     ↓
+     │
+     ▼
+Upload Suspicious Dataset
+     │
+     ▼
+CNN Feature Extraction
+     │
+     ▼
 Train Models
-     ↓
+     │
+     ▼
 Compare Models
-     ↓
-Add Employees
-     ↓
-View Alerts
+     │
+     ▼
+Manage Employees
+     │
+     ▼
+Review Alerts
 ```
 
 ---
@@ -281,28 +304,34 @@ The Employee interface allows authorized railway staff to monitor surveillance f
 
 ### Features
 
-* 🔐 Employee login
-* 🎥 Upload railway surveillance videos
-* 🔍 Automated person re-identification
-* 🚨 Suspicious-person detection
-* 📋 Detection processing
-* 🔔 Alert generation
+* 🔐 Employee Login
+* 🎥 Railway Surveillance Video Upload
+* 🔍 Automated Person Re-Identification
+* 🚨 Suspicious-Person Detection
+* 📋 Detection Processing
+* 🔔 Alert Generation
 
 ### Employee Workflow
 
 ```text
 Employee Login
-      ↓
-Monitor Railway Video
-      ↓
+      │
+      ▼
+Railway Video Monitoring
+      │
+      ▼
 Upload Video
-      ↓
+      │
+      ▼
 Process Video
-      ↓
+      │
+      ▼
 Person Re-Identification
-      ↓
+      │
+      ▼
 Detection Result
-      ↓
+      │
+      ▼
 Alert if Match Found
 ```
 
@@ -313,26 +342,26 @@ Alert if Match Found
 When the system identifies a suspicious individual, the detection is recorded as an alert.
 
 ```text
-                 Video Analysis
-                       │
-                       ▼
-                Person Detected
-                       │
-                       ▼
-                 Feature Match
-                       │
-              ┌────────┴────────┐
-              │                 │
-             YES                NO
-              │                 │
-              ▼                 ▼
-        Create Alert       No Alert
-              │
-              ▼
-        Store Detection
-              │
-              ▼
-        Admin Reviews
+             Video Analysis
+                   │
+                   ▼
+             Person Detected
+                   │
+                   ▼
+              Feature Match
+                   │
+          ┌────────┴────────┐
+          │                 │
+         YES                NO
+          │                 │
+          ▼                 ▼
+     Create Alert        No Alert
+          │
+          ▼
+    Store Detection
+          │
+          ▼
+     Admin Review
 ```
 
 The alert-management workflow allows administrators to review detections generated from monitored videos.
@@ -343,17 +372,15 @@ The alert-management workflow allows administrators to review detections generat
 
 The system evaluates two machine learning approaches:
 
-| Model         | Purpose               |
-| ------------- | --------------------- |
-| CNN           | Feature extraction    |
-| Random Forest | Person classification |
-| SVM           | Person classification |
+| Model            | Purpose               |
+| ---------------- | --------------------- |
+| 🧠 CNN           | Feature Extraction    |
+| 🌲 Random Forest | Person Classification |
+| 📐 SVM           | Person Classification |
 
 The project compares Random Forest and SVM after training on CNN-extracted features.
 
 **Random Forest achieved higher accuracy in the tested environment and was selected as the better-performing classifier for the implemented system.**
-
-> Exact accuracy percentages are not included because they are not specified in the project documentation.
 
 ---
 
@@ -372,67 +399,49 @@ The implemented system demonstrates:
 * ✅ Admin alert management
 * ✅ Separate Admin and Employee workflows
 
-The system successfully demonstrated detection of known suspicious individuals from test surveillance videos.
+The system successfully demonstrates detection of known suspicious individuals from test surveillance videos.
 
 ---
 
 # 🖥️ Screenshots
 
-> Add your actual screenshots to the `screenshots` folder and uncomment the sections below.
+Add the actual project screenshots here.
 
-## Admin Dashboard
+### Admin Dashboard
 
-<!--
 ![Admin Dashboard](screenshots/admin-dashboard.png)
--->
 
-## Dataset Management
+### Dataset Management
 
-<!--
 ![Dataset Management](screenshots/dataset-upload.png)
--->
 
-## CNN Feature Extraction
+### CNN Feature Extraction
 
-<!--
 ![CNN Feature Extraction](screenshots/cnn-feature-extraction.png)
--->
 
-## Model Training
+### Model Training
 
-<!--
 ![Model Training](screenshots/model-training.png)
--->
 
-## Model Comparison
+### Model Comparison
 
-<!--
 ![Model Comparison](screenshots/model-comparison.png)
--->
 
-## Employee Dashboard
+### Employee Dashboard
 
-<!--
 ![Employee Dashboard](screenshots/employee-dashboard.png)
--->
 
-## Railway Video Monitoring
+### Railway Video Monitoring
 
-<!--
 ![Video Monitoring](screenshots/video-monitoring.png)
--->
 
-## Suspicious Person Detection
+### Suspicious Person Detection
 
-<!--
 ![Suspicious Detection](screenshots/suspicious-detection.png)
--->
 
-## Alert Management
+### Alert Management
 
-<!--
 ![Alert Management](screenshots/alerts.png)
--->
 
 ---
 
@@ -472,37 +481,35 @@ smart-railway-surveillance/
     └── utilities/
 ```
 
-> Update the structure above to exactly match the folders in the uploaded source code before publishing if the names differ.
-
 ---
 
 # 🛠️ Technology Stack
 
 ### Programming
 
-![Python](https://img.shields.io/badge/Python-3.7.2-3776AB?style=flat-square\&logo=python\&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.7.2-3776AB?style=for-the-badge\&logo=python\&logoColor=white)
 
 ### Deep Learning
 
-![CNN](https://img.shields.io/badge/CNN-Deep%20Learning-FF6F00?style=flat-square)
+![CNN](https://img.shields.io/badge/CNN-Deep%20Learning-FF6F00?style=for-the-badge)
 
 ### Machine Learning
 
-![Random Forest](https://img.shields.io/badge/Random%20Forest-Classification-16A34A?style=flat-square)
+![Random Forest](https://img.shields.io/badge/Random%20Forest-Classification-16A34A?style=for-the-badge)
 
-![SVM](https://img.shields.io/badge/SVM-Classification-6366F1?style=flat-square)
+![SVM](https://img.shields.io/badge/SVM-Classification-6366F1?style=for-the-badge)
 
 ### Database
 
-![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?style=flat-square\&logo=mysql\&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge\&logo=mysql\&logoColor=white)
 
 ### Application
 
-![Web Application](https://img.shields.io/badge/Web-Based-Application-7C3AED?style=flat-square)
+![Web Application](https://img.shields.io/badge/Web--Based%20Application-7C3AED?style=for-the-badge)
 
 ### Domain
 
-![Railway](https://img.shields.io/badge/Indian%20Railways-Surveillance-DC2626?style=flat-square)
+![Railway](https://img.shields.io/badge/Indian%20Railways-Surveillance-DC2626?style=for-the-badge)
 
 ---
 
@@ -522,9 +529,7 @@ smart-railway-surveillance/
 
 ### Hardware
 
-The original project documentation specifies a basic hardware configuration for the project prototype.
-
-For practical development and model processing, a more capable system may be required depending on dataset size and video-processing workload.
+The project is designed as a prototype and may require additional computing resources depending on the dataset size and surveillance-video processing workload.
 
 ---
 
@@ -570,17 +575,21 @@ The application uses **MySQL** for storing application and detection-related dat
 
 The project includes a `Database.txt` file containing the required database setup information.
 
-### General Setup
+### Setup Workflow
 
 ```text
 Install MySQL
-     ↓
+     │
+     ▼
 Create Required Database
-     ↓
+     │
+     ▼
 Execute Database Configuration
-     ↓
+     │
+     ▼
 Configure Database Credentials
-     ↓
+     │
+     ▼
 Start Application
 ```
 
@@ -588,13 +597,11 @@ Start Application
 
 Do not upload real passwords, database credentials, API keys, or other secrets to GitHub.
 
-Use local configuration or environment variables for sensitive information.
-
 ---
 
 # ▶️ Running the Application
 
-The project documentation provides a `run.bat` script for starting the application locally.
+The project provides a `run.bat` script for starting the application locally.
 
 On Windows:
 
@@ -608,8 +615,6 @@ Follow the local server URL displayed by the application.
 
 # 🧪 Testing the System
 
-After setting up the database and application:
-
 ### Admin
 
 1. Login as administrator.
@@ -618,7 +623,7 @@ After setting up the database and application:
 4. Train Random Forest and SVM.
 5. Compare model performance.
 6. Add employee accounts.
-7. Review alerts.
+7. Review generated alerts.
 
 ### Employee
 
@@ -634,56 +639,56 @@ After setting up the database and application:
 # 🔄 End-to-End Workflow
 
 ```text
-                    START
-                      │
-                      ▼
-                 Admin Login
-                      │
-                      ▼
-             Upload Dataset
-                      │
-                      ▼
-           CNN Feature Extraction
-                      │
-                      ▼
-              Train RF + SVM
-                      │
-                      ▼
-             Compare Performance
-                      │
-                      ▼
-             Prepare Monitoring
-                      │
-                      ▼
-               Employee Login
-                      │
-                      ▼
-             Upload CCTV Video
-                      │
-                      ▼
-              Analyze Video
-                      │
-                      ▼
-            Extract Features
-                      │
-                      ▼
-           Person Re-Identification
-                      │
-                ┌─────┴─────┐
-                ▼           ▼
-              Match      No Match
-                │           │
-                ▼           ▼
-          Generate Alert   Continue
-                │
-                ▼
-           Store Alert
-                │
-                ▼
-          Admin Reviews
-                │
-                ▼
-               END
+                         START
+                           │
+                           ▼
+                      Admin Login
+                           │
+                           ▼
+                    Upload Dataset
+                           │
+                           ▼
+                 CNN Feature Extraction
+                           │
+                           ▼
+                    Train RF + SVM
+                           │
+                           ▼
+                  Compare Performance
+                           │
+                           ▼
+                   Prepare Monitoring
+                           │
+                           ▼
+                    Employee Login
+                           │
+                           ▼
+                   Upload CCTV Video
+                           │
+                           ▼
+                     Analyze Video
+                           │
+                           ▼
+                   Extract Features
+                           │
+                           ▼
+                Person Re-Identification
+                           │
+                     ┌─────┴─────┐
+                     ▼           ▼
+                   Match      No Match
+                     │           │
+                     ▼           ▼
+               Generate Alert  Continue
+                     │
+                     ▼
+                  Store Alert
+                     │
+                     ▼
+                 Admin Review
+                     │
+                     ▼
+                    END
 ```
 
 ---
@@ -728,8 +733,6 @@ Automated identification should not be treated as definitive evidence without ap
 
 # ⚠️ Limitations
 
-The current implementation has several areas that can be improved:
-
 ### 1. Pre-recorded Video
 
 The current demonstration focuses on uploaded/test surveillance videos.
@@ -770,13 +773,17 @@ Integrate live CCTV streams for continuous monitoring.
 
 ```text
 CCTV Camera
-     ↓
+     │
+     ▼
 Live Stream
-     ↓
+     │
+     ▼
 Frame Processing
-     ↓
+     │
+     ▼
 Person Re-ID
-     ↓
+     │
+     ▼
 Alert
 ```
 
@@ -893,23 +900,15 @@ This project connects several technical areas:
 
 # 📌 Project Highlights
 
-```text
-╔══════════════════════════════════════════════╗
-║       SMART RAILWAY SURVEILLANCE             ║
-╠══════════════════════════════════════════════╣
-║                                              ║
-║  🧠 CNN Feature Extraction                   ║
-║  👤 Person Re-Identification                 ║
-║  🌲 Random Forest Classification             ║
-║  📐 SVM Classification                       ║
-║  🎥 Video Surveillance                      ║
-║  🚨 Automated Alert Management               ║
-║  👨‍💼 Admin Workflow                           ║
-║  👮 Employee Workflow                        ║
-║  🗄️ MySQL Data Management                    ║
-║                                              ║
-╚══════════════════════════════════════════════╝
-```
+<div align="center">
+
+|          🧠 AI         |    👤 Recognition    |  🎥 Surveillance |
+| :--------------------: | :------------------: | :--------------: |
+| CNN Feature Extraction |     Person Re-ID     | Video Monitoring |
+|      Random Forest     | Suspicious Detection | Alert Management |
+|   SVM Classification   |   Feature Matching   |   Admin Review   |
+
+</div>
 
 ---
 
@@ -974,28 +973,7 @@ If you found this project interesting or useful:
 
 ### 🚨 Public Safety
 
-<br>
-
 **Built with Python, Machine Learning & Deep Learning**
 
 </div>
 ```
-
-### Your GitHub repository should now look like
-
-```text
-smart-railway-surveillance
-│
-├── README.md              ← paste the above here
-├── requirements.txt
-├── Database.txt
-├── run.bat
-├── testVideos/
-├── model/
-├── dataset/
-├── templates/
-├── static/
-└── your actual project files...
-```
-
-**Important:** I deliberately did **not** put a fake accuracy percentage, fake dataset size, fake CNN architecture, or technologies that aren't supported by your project document. The document confirms CNN feature extraction, Random Forest/SVM comparison, MySQL, Python 3.7.2, Admin/Employee modules, video monitoring, and alert generation. 
